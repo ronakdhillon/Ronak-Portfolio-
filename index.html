@@ -310,7 +310,7 @@
                         <i class="fa-solid fa-arrow-right text-xs"></i>
                     </a>
 
-                    <a href="mailto:800dhillonronak2@gmail.com" class="px-5 py-3 text-sm glass-panel text-white font-medium rounded-lg hover:border-cyanNeon/60 hover:text-cyanNeon transition-all flex items-center gap-2">
+                    <a href="mailto:ronakdb.ecom18@gmail.com" class="px-5 py-3 text-sm glass-panel text-white font-medium rounded-lg hover:border-cyanNeon/60 hover:text-cyanNeon transition-all flex items-center gap-2">
                         <i class="fa-solid fa-paper-plane text-cyanNeon"></i>
                         <span>Email Direct</span>
                     </a>
@@ -318,12 +318,11 @@
 
                 <!-- Visible Email & Quick Contacts -->
                 <div class="pt-4 border-t border-gray-800/80 flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6 text-xs font-mono text-gray-300">
-                    <a href="mailto:800dhillonronak2@gmail.com" class="hover:text-cyanNeon flex items-center gap-2 bg-darkBg/60 px-3 py-1.5 rounded-md border border-cyanNeon/20">
+                    <a href="mailto:ronakdb.ecom18@gmail.com" class="hover:text-cyanNeon flex items-center gap-2 bg-darkBg/60 px-3 py-1.5 rounded-md border border-cyanNeon/20">
                         <i class="fa-solid fa-envelope text-cyanNeon"></i>
-                        <span class="font-semibold text-white">800dhillonronak2@gmail.com</span>
+                        <span class="font-semibold text-white">ronakdb.ecom18@gmail.com</span>
                     </a>
-                    <a href="tel:+917404730354" class="hover:text-cyanNeon flex items-center gap-2 bg-darkBg/60 px-3 py-1.5 rounded-md border border-gray-800">
-                        <i class="fa-solid fa-phone text-cyanNeon"></i> +91 7404730354
+                    
                     </a>
                     <span class="flex items-center gap-2 px-3 py-1.5">
                         <i class="fa-solid fa-location-dot text-cyanNeon"></i> Hisar, Haryana
@@ -576,28 +575,19 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Email Card -->
-                <a href="mailto:800dhillonronak2@gmail.com" class="glass-panel p-6 sm:p-8 rounded-2xl border-cyanNeon/40 hover:border-cyanNeon transition-all text-center space-y-4 group">
+                <a href="mailto:ronakdb.ecom18@gmail.com" class="glass-panel p-6 sm:p-8 rounded-2xl border-cyanNeon/40 hover:border-cyanNeon transition-all text-center space-y-4 group">
                     <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-cyanNeon/10 border border-cyanNeon/30 flex items-center justify-center text-cyanNeon text-xl sm:text-2xl mx-auto group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-envelope"></i>
                     </div>
                     <div class="font-bold text-white text-lg">Email Me</div>
                     <div class="font-mono text-xs sm:text-sm text-cyanNeon font-semibold break-all bg-darkBg/80 py-2 px-3 rounded-lg border border-cyanNeon/20">
-                        800dhillonronak2@gmail.com
+                        ronakdb.ecom18@gmail.com
                     </div>
                     <span class="inline-block text-xs font-mono px-4 py-2 rounded-full bg-cyanNeon/20 text-cyanNeon border border-cyanNeon/40 group-hover:bg-cyanNeon group-hover:text-darkBg transition-all">Send Email &rarr;</span>
                 </a>
 
                 <!-- Phone Card -->
-                <a href="tel:+917404730354" class="glass-panel p-6 sm:p-8 rounded-2xl border-cyanNeon/30 hover:border-cyanNeon transition-all text-center space-y-4 group">
-                    <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-cyanNeon/10 border border-cyanNeon/30 flex items-center justify-center text-cyanNeon text-xl sm:text-2xl mx-auto group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-phone"></i>
-                    </div>
-                    <div class="font-bold text-white text-lg">Call Me</div>
-                    <div class="font-mono text-sm text-gray-300 py-2">
-                        +91 7404730354
-                    </div>
-                    <span class="inline-block text-xs font-mono px-4 py-2 rounded-full bg-cyanNeon/20 text-cyanNeon border border-cyanNeon/40 group-hover:bg-cyanNeon group-hover:text-darkBg transition-all">Call Direct &rarr;</span>
-                </a>
+                
 
                      <a href="https://www.linkedin.com/in/ronak-dhillon-09a495405?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="glass-panel p-6 sm:p-8 rounded-2xl border-cyanNeon/40 hover:border-cyanNeon transition-all text-center space-y-4 group">
                     <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-cyanNeon/10 border border-cyanNeon/30 flex items-center justify-center text-cyanNeon text-xl sm:text-2xl mx-auto group-hover:scale-110 transition-transform">
@@ -653,6 +643,7 @@
         animateCursor();
 
         // 2. Interactive Click-Following Robotic Micro-Drone Insect Logic
+                // 2. Interactive Click-Following Robotic Micro-Drone Insect Logic
         const insect = document.getElementById('robo-insect');
         const eyeLeft = document.getElementById('robot-eye-left');
         const eyeRight = document.getElementById('robot-eye-right');
@@ -671,6 +662,7 @@
         let speed = 3.5;
         let returnTimeout = null;
         let isFollowingClick = false;
+        let timerStarted = false; // Tracks if 3s countdown has started for current click
 
         window.addEventListener('resize', () => {
             homePos = getHomePosition();
@@ -682,17 +674,12 @@
 
         window.addEventListener('click', (e) => {
             isFollowingClick = true;
+            timerStarted = false; // Reset timer status for new target click
             targetX = e.clientX;
             targetY = e.clientY;
 
+            // Clear any previous scheduled return timer
             if (returnTimeout) clearTimeout(returnTimeout);
-
-            returnTimeout = setTimeout(() => {
-                isFollowingClick = false;
-                const latestHome = getHomePosition();
-                targetX = latestHome.x;
-                targetY = latestHome.y;
-            }, 3000);
         });
 
         function updateInsectPosition() {
@@ -721,6 +708,15 @@
                 const rad = (currentAngle - 90) * (Math.PI / 180);
                 insectX += Math.cos(rad) * Math.min(speed, distance);
                 insectY += Math.sin(rad) * Math.min(speed, distance);
+            } else if (isFollowingClick && !timerStarted) {
+                // START 3-SECOND TIMER ONLY AFTER ARRIVING AT CLICKED POINT
+                timerStarted = true;
+                returnTimeout = setTimeout(() => {
+                    isFollowingClick = false;
+                    const latestHome = getHomePosition();
+                    targetX = latestHome.x;
+                    targetY = latestHome.y;
+                }, 3000);
             }
 
             insect.style.left = `${insectX}px`;
@@ -730,6 +726,7 @@
             requestAnimationFrame(updateInsectPosition);
         }
         updateInsectPosition();
+
 
         // 3. Mouse position tracking for spotlight card effect
         document.querySelectorAll('.glass-panel').forEach(card => {
