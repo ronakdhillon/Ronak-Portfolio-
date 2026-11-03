@@ -1,9 +1,8 @@
-```html
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Ronak Dhillon | AI Developer & Engineering Student</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -42,7 +41,11 @@
     </script>
 
     <style>
-        body {
+        html, body {
+            width: 100%;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
             background-color: #05070c;
             color: #e2e8f0;
             overflow-x: hidden;
@@ -54,8 +57,8 @@
             position: fixed;
             top: 0;
             left: 0;
-            width: 100vw;
-            height: 100vh;
+            width: 100%;
+            height: 100%;
             z-index: 0;
             pointer-events: none;
         }
@@ -86,7 +89,7 @@
         }
 
         .glass-panel {
-            background: rgba(12, 18, 30, 0.7);
+            background: rgba(12, 18, 30, 0.75);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
             border: 1px solid rgba(0, 240, 255, 0.18);
@@ -122,7 +125,7 @@
         /* Scroll reveal class */
         .reveal {
             opacity: 0;
-            transform: translateY(40px);
+            transform: translateY(30px);
             transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
 
@@ -152,12 +155,12 @@
         /* Autonomous Robotic Micro-Drone Insect Styling */
         #robo-insect {
             position: fixed;
-            width: 42px;
-            height: 42px;
+            width: 36px;
+            height: 36px;
             z-index: 9000;
             pointer-events: none;
             transform-origin: center center;
-            transition: transform 0.15s ease-out;
+            transition: transform 0.1s ease-out;
             filter: drop-shadow(0 0 8px rgba(0, 240, 255, 0.6));
         }
 
@@ -201,7 +204,7 @@
         }
     </style>
 </head>
-<body class="font-sans antialiased relative">
+<body class="font-sans antialiased relative w-full overflow-x-hidden">
 
     <!-- Autonomous Robotic Micro-Drone Insect -->
     <div id="robo-insect">
@@ -245,80 +248,80 @@
     <div id="custom-cursor-dot" class="hidden md:block"></div>
 
     <!-- Ambient Background Glows -->
-    <div class="glow-bg w-96 h-96 bg-cyanNeon/20 top-10 -left-20"></div>
-    <div class="glow-bg w-96 h-96 bg-blueNeon/20 top-[40%] -right-20"></div>
-    <div class="glow-bg w-[500px] h-[500px] bg-purpleNeon/15 bottom-10 left-1/3"></div>
+    <div class="glow-bg w-72 h-72 sm:w-96 sm:h-96 bg-cyanNeon/20 top-10 -left-20"></div>
+    <div class="glow-bg w-72 h-72 sm:w-96 sm:h-96 bg-blueNeon/20 top-[40%] -right-20"></div>
 
     <!-- Background Grid Overlay -->
     <div class="fixed inset-0 grid-pattern pointer-events-none z-0"></div>
 
     <!-- Navigation Bar -->
-    <nav class="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-cyanNeon/10 bg-darkBg/80 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="#hero" class="font-mono text-xl font-bold tracking-wider text-white flex items-center gap-2">
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-cyanNeon/10 bg-darkBg/90 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
+            <a href="#hero" class="font-mono text-lg sm:text-xl font-bold tracking-wider text-white flex items-center gap-2">
                 <span class="text-cyanNeon">&lt;</span>RD<span class="text-cyanNeon">/&gt;</span>
                 <span class="text-xs text-gray-400 font-normal hidden sm:inline-block">| AI &amp; ECE</span>
             </a>
 
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+            <div class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-gray-300">
                 <a href="#about" class="hover:text-cyanNeon transition-colors">About</a>
-                <a href="#skills" class="hover:text-cyanNeon transition-colors">Skills &amp; Tools</a>
+                <a href="#skills" class="hover:text-cyanNeon transition-colors">Skills</a>
                 <a href="#projects" class="hover:text-cyanNeon transition-colors">Projects</a>
                 <a href="#publications" class="hover:text-cyanNeon transition-colors">Publications</a>
                 <a href="#contact" class="hover:text-cyanNeon transition-colors">Contact</a>
             </div>
 
-            <a href="#contact" class="px-4 py-2 text-xs font-mono font-semibold text-cyanNeon border border-cyanNeon/50 rounded-lg hover:bg-cyanNeon/10 hover:shadow-neon-button transition-all">
-                GET IN TOUCH
+            <a href="mailto:800dhillonronak2@gmail.com" class="px-3 py-1.5 sm:px-4 sm:py-2 text-xs font-mono font-semibold text-cyanNeon border border-cyanNeon/50 rounded-lg hover:bg-cyanNeon/10 hover:shadow-neon-button transition-all">
+                EMAIL ME
             </a>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <main class="relative z-10 pt-28 px-4 sm:px-6 max-w-7xl mx-auto space-y-28 pb-20">
+    <main class="relative z-10 pt-24 sm:pt-28 px-4 sm:px-6 max-w-7xl mx-auto space-y-20 sm:space-y-28 pb-20 w-full">
 
         <!-- Hero Section -->
-        <section id="hero" class="min-h-[80vh] flex flex-col lg:flex-row items-center justify-between gap-12 py-8 reveal">
-            <div class="flex-1 space-y-6 text-center lg:text-left">
+        <section id="hero" class="min-h-[75vh] flex flex-col-reverse lg:flex-row items-center justify-between gap-8 sm:gap-12 py-4 sm:py-8 reveal">
+            <div class="flex-1 space-y-5 text-center lg:text-left w-full">
                 <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-panel border border-cyanNeon/30 text-cyanNeon text-xs font-mono">
                     <span class="w-2 h-2 rounded-full bg-cyanNeon animate-ping"></span>
                     <span>Building Next-Gen AI Solutions</span>
                 </div>
 
-                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
                     Hi, I'm <span class="bg-gradient-to-r from-cyanNeon via-blueNeon to-purpleNeon bg-clip-text text-transparent text-glow">Ronak Dhillon</span>
                 </h1>
 
-                <p class="text-lg sm:text-xl font-medium text-gray-300">
+                <p class="text-base sm:text-xl font-medium text-gray-300">
                     B.Tech Student in <span class="text-white font-semibold">Electronics &amp; Computer Engineering</span> &amp; Aspiring AI Developer.
                 </p>
 
-                <p class="text-gray-400 max-w-2xl text-base leading-relaxed">
+                <p class="text-gray-400 max-w-2xl text-sm sm:text-base leading-relaxed mx-auto lg:mx-0">
                     Passionate about learning AI to reduce human effort through automation. At age 16, founded &amp; managed an independent <span class="text-cyanNeon font-semibold">Social Media Marketing &amp; Content Creation Agency</span>, collaborating with <span class="text-white font-semibold">3 USA-based companies</span>. Currently studying at <span class="text-gray-200 font-medium">Guru Jambheshwar University of Science and Technology, Hisar</span>.
                 </p>
 
                 <!-- Action Buttons -->
-                <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
-                    <a href="#projects" class="px-6 py-3 bg-gradient-to-r from-cyanNeon to-blue-600 text-darkBg font-bold rounded-lg shadow-neon-button hover:scale-105 transition-all flex items-center gap-2">
+                <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+                    <a href="#projects" class="px-5 py-3 text-sm bg-gradient-to-r from-cyanNeon to-blue-600 text-darkBg font-bold rounded-lg shadow-neon-button hover:scale-105 transition-all flex items-center gap-2">
                         <span>View Projects</span>
-                        <i class="fa-solid font-mono text-xs fa-arrow-right"></i>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
                     </a>
 
-                    <a href="#contact" class="px-6 py-3 glass-panel text-white font-medium rounded-lg hover:border-cyanNeon/60 hover:text-cyanNeon transition-all flex items-center gap-2">
-                        <i class="fa-solid fa-paper-plane text-cyanNeon text-lg"></i>
-                        <span>Contact Me</span>
+                    <a href="mailto:800dhillonronak2@gmail.com" class="px-5 py-3 text-sm glass-panel text-white font-medium rounded-lg hover:border-cyanNeon/60 hover:text-cyanNeon transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-paper-plane text-cyanNeon"></i>
+                        <span>Email Direct</span>
                     </a>
                 </div>
 
-                <!-- Quick Info Bar -->
-                <div class="pt-6 border-t border-gray-800/80 flex flex-wrap justify-center lg:justify-start gap-6 text-xs font-mono text-gray-400">
-                    <a href="mailto:800dhillonronak2@gmail.com" class="hover:text-cyanNeon flex items-center gap-2">
-                        <i class="fa-solid fa-envelope text-cyanNeon"></i> 800dhillonronak2@gmail.com
+                <!-- Visible Email & Quick Contacts -->
+                <div class="pt-4 border-t border-gray-800/80 flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6 text-xs font-mono text-gray-300">
+                    <a href="mailto:800dhillonronak2@gmail.com" class="hover:text-cyanNeon flex items-center gap-2 bg-darkBg/60 px-3 py-1.5 rounded-md border border-cyanNeon/20">
+                        <i class="fa-solid fa-envelope text-cyanNeon"></i>
+                        <span class="font-semibold text-white">800dhillonronak2@gmail.com</span>
                     </a>
-                    <a href="tel:+917404730354" class="hover:text-cyanNeon flex items-center gap-2">
+                    <a href="tel:+917404730354" class="hover:text-cyanNeon flex items-center gap-2 bg-darkBg/60 px-3 py-1.5 rounded-md border border-gray-800">
                         <i class="fa-solid fa-phone text-cyanNeon"></i> +91 7404730354
                     </a>
-                    <span class="flex items-center gap-2">
+                    <span class="flex items-center gap-2 px-3 py-1.5">
                         <i class="fa-solid fa-location-dot text-cyanNeon"></i> Hisar, Haryana
                     </span>
                 </div>
@@ -326,16 +329,16 @@
 
             <!-- Profile Picture Container -->
             <div class="relative flex-shrink-0">
-                <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-2xl p-1 bg-gradient-to-tr from-cyanNeon via-blue-600 to-purpleNeon shadow-neon-glow transform hover:rotate-1 transition-transform">
+                <div class="relative w-56 h-56 sm:w-72 sm:h-72 rounded-2xl p-1 bg-gradient-to-tr from-cyanNeon via-blue-600 to-purpleNeon shadow-neon-glow transform hover:rotate-1 transition-transform">
                     <div class="w-full h-full bg-darkBg rounded-[14px] overflow-hidden relative">
                         <img src="https://lh3.googleusercontent.com/gg-dl/AHiVA1mQoALqhalZkQ2ORKfaUtBt31hXZrnW1Td2-yCm8T1vvvB-TzOyJEJh9sLjS5oxziEZEWV8f4seUSKwXz6zTxrhGlG_Pe7UDFeNLaVk6zYZmIlXo_NKrOItDR-98NptOoP-NlZ_g5TalAH3YLfGP9oZl5hb0HlZIFyCdCgL07IaPRoDBg" alt="Ronak Dhillon" class="w-full h-full object-cover filter saturate-105 hover:scale-105 transition-transform duration-500">
                     </div>
                 </div>
 
-                <div class="absolute -bottom-4 -right-4 glass-panel px-4 py-2.5 rounded-xl border border-cyanNeon/40 flex items-center gap-3 shadow-lg">
-                    <i class="fa-solid fa-trophy text-yellow-400 text-lg"></i>
+                <div class="absolute -bottom-3 -right-2 sm:-bottom-4 sm:-right-4 glass-panel px-3 py-2 rounded-xl border border-cyanNeon/40 flex items-center gap-2.5 shadow-lg">
+                    <i class="fa-solid fa-trophy text-yellow-400 text-base"></i>
                     <div>
-                        <div class="text-[10px] uppercase tracking-wider text-gray-400 font-mono">Achievement</div>
+                        <div class="text-[9px] uppercase tracking-wider text-gray-400 font-mono">Achievement</div>
                         <div class="text-xs font-bold text-white">SIH Round 2 Qualifier</div>
                     </div>
                 </div>
@@ -343,10 +346,10 @@
         </section>
 
         <!-- About Section -->
-        <section id="about" class="space-y-8 reveal">
+        <section id="about" class="space-y-6 sm:space-y-8 reveal">
             <div class="border-l-4 border-cyanNeon pl-4">
-                <h2 class="text-3xl font-extrabold text-white tracking-tight">About &amp; Experience</h2>
-                <p class="text-sm font-mono text-cyanNeon mt-1">// Academic &amp; Entrepreneurial Background</p>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">About &amp; Experience</h2>
+                <p class="text-xs sm:text-sm font-mono text-cyanNeon mt-1">// Academic &amp; Entrepreneurial Background</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -399,10 +402,10 @@
         </section>
 
         <!-- Technical Skills -->
-        <section id="skills" class="space-y-8 reveal">
+        <section id="skills" class="space-y-6 sm:space-y-8 reveal">
             <div class="border-l-4 border-cyanNeon pl-4">
-                <h2 class="text-3xl font-extrabold text-white tracking-tight">Technical Skills</h2>
-                <p class="text-sm font-mono text-cyanNeon mt-1">// Languages, Tools &amp; Automation</p>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Technical Skills</h2>
+                <p class="text-xs sm:text-sm font-mono text-cyanNeon mt-1">// Languages, Tools &amp; Automation</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -469,14 +472,14 @@
         </section>
 
         <!-- Projects -->
-        <section id="projects" class="space-y-8 reveal">
+        <section id="projects" class="space-y-6 sm:space-y-8 reveal">
             <div class="border-l-4 border-cyanNeon pl-4">
-                <h2 class="text-3xl font-extrabold text-white tracking-tight">Featured Projects</h2>
-                <p class="text-sm font-mono text-cyanNeon mt-1">// Hackathons &amp; Solutions</p>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Featured Projects</h2>
+                <p class="text-xs sm:text-sm font-mono text-cyanNeon mt-1">// Hackathons &amp; Solutions</p>
             </div>
 
-            <div class="glass-panel p-8 rounded-2xl border-cyanNeon/30 hover:border-cyanNeon/60 space-y-6 relative overflow-hidden group">
-                <div class="absolute top-0 right-0 px-4 py-1.5 bg-gradient-to-l from-cyanNeon to-blue-600 text-darkBg font-mono text-xs font-bold rounded-bl-xl shadow-md">
+            <div class="glass-panel p-6 sm:p-8 rounded-2xl border-cyanNeon/30 hover:border-cyanNeon/60 space-y-6 relative overflow-hidden group">
+                <div class="sm:absolute top-0 right-0 px-4 py-1.5 bg-gradient-to-l from-cyanNeon to-blue-600 text-darkBg font-mono text-xs font-bold rounded-bl-xl shadow-md inline-block mb-2 sm:mb-0">
                     SMART INDIA HACKATHON (SIH)
                 </div>
 
@@ -486,7 +489,7 @@
                             ● Selected for Round 2 (1st week of Dec 2026)
                         </span>
                     </div>
-                    <h3 class="text-2xl font-bold text-white group-hover:text-cyanNeon transition-colors">
+                    <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-cyanNeon transition-colors">
                         Weighing Machine Online Government Approved Check
                     </h3>
                 </div>
@@ -507,24 +510,24 @@
         </section>
 
         <!-- E-Book Section -->
-        <section id="publications" class="space-y-8 reveal">
+        <section id="publications" class="space-y-6 sm:space-y-8 reveal">
             <div class="border-l-4 border-cyanNeon pl-4">
-                <h2 class="text-3xl font-extrabold text-white tracking-tight">Publications &amp; Authorship</h2>
-                <p class="text-sm font-mono text-cyanNeon mt-1">// Published E-Book</p>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Publications &amp; Authorship</h2>
+                <p class="text-xs sm:text-sm font-mono text-cyanNeon mt-1">// Published E-Book</p>
             </div>
 
             <div class="glass-panel p-6 sm:p-8 rounded-2xl border-cyanNeon/20 hover:border-cyanNeon/50 flex flex-col md:flex-row items-center gap-8">
                 
                 <!-- Native SVG/CSS E-Book Cover Rendering -->
-                <div class="w-60 h-84 rounded-xl overflow-hidden shadow-2xl border-2 border-amber-200/30 bg-[#173b36] flex-shrink-0 flex flex-col justify-between p-6 text-center font-sans text-amber-100 relative group hover:scale-105 transition-transform duration-300">
+                <div class="w-56 h-80 rounded-xl overflow-hidden shadow-2xl border-2 border-amber-200/30 bg-[#173b36] flex-shrink-0 flex flex-col justify-between p-5 text-center font-sans text-amber-100 relative group hover:scale-105 transition-transform duration-300">
                     <div class="space-y-1">
-                        <h4 class="text-2xl font-black tracking-wider text-[#e6dbb8] leading-tight">DECODE YOUR DOG</h4>
-                        <div class="text-[10px] font-semibold tracking-widest text-[#d8c89b] uppercase pt-1">The Body Language Playbook</div>
+                        <h4 class="text-xl font-black tracking-wider text-[#e6dbb8] leading-tight">DECODE YOUR DOG</h4>
+                        <div class="text-[9px] font-semibold tracking-widest text-[#d8c89b] uppercase pt-1">The Body Language Playbook</div>
                     </div>
 
                     <!-- Stylized Canine Silhouette -->
-                    <div class="my-4 flex justify-center">
-                        <svg class="w-28 h-28 text-[#d8c89b]" viewBox="0 0 100 100" fill="currentColor">
+                    <div class="my-3 flex justify-center">
+                        <svg class="w-24 h-24 text-[#d8c89b]" viewBox="0 0 100 100" fill="currentColor">
                             <path d="M50 15 C35 15 25 28 25 45 C25 60 30 75 40 85 C45 90 55 90 60 85 C70 75 75 60 75 45 C75 28 65 15 50 15 Z" fill="#b87a4b"/>
                             <path d="M22 30 C12 35 10 55 20 65 C25 60 25 45 22 30 Z" fill="#8c532b"/>
                             <path d="M78 30 C88 35 90 55 80 65 C75 60 75 45 78 30 Z" fill="#8c532b"/>
@@ -536,11 +539,11 @@
                         </svg>
                     </div>
 
-                    <div class="space-y-3">
-                        <p class="text-[9.5pt] leading-tight text-[#e2d6b3] italic font-serif">
+                    <div class="space-y-2">
+                        <p class="text-[8.5pt] leading-tight text-[#e2d6b3] italic font-serif">
                             "Understand your dog. Prevent reactivity. Create calm — together."
                         </p>
-                        <div class="text-xs font-medium tracking-wide text-[#f5ebd0] border-t border-[#d8c89b]/30 pt-2">
+                        <div class="text-xs font-medium tracking-wide text-[#f5ebd0] border-t border-[#d8c89b]/30 pt-1.5">
                             Ronak Dhillon
                         </div>
                     </div>
@@ -551,7 +554,7 @@
                     <div class="inline-block px-3 py-1 rounded-full text-xs font-mono bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">
                         ● Published Author
                     </div>
-                    <h3 class="text-2xl font-bold text-white">DECODE YOUR DOG: The Body Language Playbook</h3>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white">DECODE YOUR DOG: The Body Language Playbook</h3>
                     <p class="text-cyanNeon font-mono text-xs">Canine Behavioral Modification &amp; Psychological Techniques</p>
                     <p class="text-gray-300 text-sm leading-relaxed">
                         Authored an e-book detailing practical methods to analyze canine body language, reduce aggressive behavior, prevent reactivity, and equip owners with step-by-step behavior correction methodologies.
@@ -561,31 +564,35 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="space-y-8 reveal">
+        <section id="contact" class="space-y-6 sm:space-y-8 reveal">
             <div class="border-l-4 border-cyanNeon pl-4">
-                <h2 class="text-3xl font-extrabold text-white tracking-tight">Get In Touch</h2>
-                <p class="text-sm font-mono text-cyanNeon mt-1">// Connect &amp; Network</p>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Get In Touch</h2>
+                <p class="text-xs sm:text-sm font-mono text-cyanNeon mt-1">// Connect &amp; Network</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Email Card -->
-                <a href="mailto:800dhillonronak2@gmail.com" class="glass-panel p-8 rounded-2xl border-cyanNeon/30 hover:border-cyanNeon transition-all text-center space-y-4 group">
-                    <div class="w-16 h-16 rounded-full bg-cyanNeon/10 border border-cyanNeon/30 flex items-center justify-center text-cyanNeon text-2xl mx-auto group-hover:scale-110 transition-transform">
+                <a href="mailto:800dhillonronak2@gmail.com" class="glass-panel p-6 sm:p-8 rounded-2xl border-cyanNeon/40 hover:border-cyanNeon transition-all text-center space-y-4 group">
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-cyanNeon/10 border border-cyanNeon/30 flex items-center justify-center text-cyanNeon text-xl sm:text-2xl mx-auto group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-envelope"></i>
                     </div>
                     <div class="font-bold text-white text-lg">Email Me</div>
-                    <div class="font-mono text-sm text-gray-300 break-all">800dhillonronak2@gmail.com</div>
-                    <span class="inline-block text-xs font-mono px-4 py-1.5 rounded-full bg-cyanNeon/20 text-cyanNeon border border-cyanNeon/40 group-hover:bg-cyanNeon group-hover:text-darkBg transition-all">Send Message &rarr;</span>
+                    <div class="font-mono text-xs sm:text-sm text-cyanNeon font-semibold break-all bg-darkBg/80 py-2 px-3 rounded-lg border border-cyanNeon/20">
+                        800dhillonronak2@gmail.com
+                    </div>
+                    <span class="inline-block text-xs font-mono px-4 py-2 rounded-full bg-cyanNeon/20 text-cyanNeon border border-cyanNeon/40 group-hover:bg-cyanNeon group-hover:text-darkBg transition-all">Send Email &rarr;</span>
                 </a>
 
                 <!-- Phone Card -->
-                <a href="tel:+917404730354" class="glass-panel p-8 rounded-2xl border-cyanNeon/30 hover:border-cyanNeon transition-all text-center space-y-4 group">
-                    <div class="w-16 h-16 rounded-full bg-cyanNeon/10 border border-cyanNeon/30 flex items-center justify-center text-cyanNeon text-2xl mx-auto group-hover:scale-110 transition-transform">
+                <a href="tel:+917404730354" class="glass-panel p-6 sm:p-8 rounded-2xl border-cyanNeon/30 hover:border-cyanNeon transition-all text-center space-y-4 group">
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-cyanNeon/10 border border-cyanNeon/30 flex items-center justify-center text-cyanNeon text-xl sm:text-2xl mx-auto group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-phone"></i>
                     </div>
                     <div class="font-bold text-white text-lg">Call Me</div>
-                    <div class="font-mono text-sm text-gray-300">+91 7404730354</div>
-                    <span class="inline-block text-xs font-mono px-4 py-1.5 rounded-full bg-cyanNeon/20 text-cyanNeon border border-cyanNeon/40 group-hover:bg-cyanNeon group-hover:text-darkBg transition-all">Call Direct &rarr;</span>
+                    <div class="font-mono text-sm text-gray-300 py-2">
+                        +91 7404730354
+                    </div>
+                    <span class="inline-block text-xs font-mono px-4 py-2 rounded-full bg-cyanNeon/20 text-cyanNeon border border-cyanNeon/40 group-hover:bg-cyanNeon group-hover:text-darkBg transition-all">Call Direct &rarr;</span>
                 </a>
             </div>
         </section>
@@ -593,8 +600,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-gray-800/80 bg-darkBg/90 py-8 relative z-10">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-gray-500">
+    <footer class="border-t border-gray-800/80 bg-darkBg/90 py-6 sm:py-8 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-gray-500">
             <div>
                 &copy; <span id="year"></span> Ronak Dhillon. All rights reserved.
             </div>
@@ -635,10 +642,9 @@
         const eyeLeft = document.getElementById('robot-eye-left');
         const eyeRight = document.getElementById('robot-eye-right');
 
-        // Home Position: Top-Right Corner
         const getHomePosition = () => ({
-            x: window.innerWidth - 60,
-            y: 60
+            x: Math.min(window.innerWidth - 40, window.innerWidth * 0.9),
+            y: 50
         });
 
         let homePos = getHomePosition();
@@ -651,7 +657,6 @@
         let returnTimeout = null;
         let isFollowingClick = false;
 
-        // Listen for window resize to update home position
         window.addEventListener('resize', () => {
             homePos = getHomePosition();
             if (!isFollowingClick) {
@@ -660,16 +665,13 @@
             }
         });
 
-        // Listen for clicks on the page to attract the robotic insect
         window.addEventListener('click', (e) => {
             isFollowingClick = true;
             targetX = e.clientX;
             targetY = e.clientY;
 
-            // Clear previous return timer
             if (returnTimeout) clearTimeout(returnTimeout);
 
-            // Reset 3-second timer to go back home if no further clicks
             returnTimeout = setTimeout(() => {
                 isFollowingClick = false;
                 const latestHome = getHomePosition();
@@ -683,22 +685,19 @@
             const dy = targetY - insectY;
             const distance = Math.sqrt(dx * dx + dy * dy);
 
-            // Adjust eyes indicator: red when actively chasing a click, cyan when idle/returning
             if (isFollowingClick && distance > 15) {
                 eyeLeft.setAttribute('fill', '#ff0055');
                 eyeRight.setAttribute('fill', '#ff0055');
-                speed = 5.0; // Sprint speed on click
+                speed = 4.8;
             } else {
                 eyeLeft.setAttribute('fill', '#00f0ff');
                 eyeRight.setAttribute('fill', '#00f0ff');
-                speed = 3.5; // Normal walk speed
+                speed = 3.2;
             }
 
-            // Move towards target if not close enough
             if (distance > 5) {
                 const desiredAngle = Math.atan2(dy, dx) * (180 / Math.PI) + 90;
 
-                // Smooth rotation angle interpolation
                 let angleDiff = desiredAngle - currentAngle;
                 while (angleDiff < -180) angleDiff += 360;
                 while (angleDiff > 180) angleDiff -= 360;
@@ -739,7 +738,7 @@
 
         document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-        // 5. 3D WebGL Particles and Rotating Shape Engine using Three.js
+        // 5. Responsive 3D WebGL Engine using Three.js
         window.onload = function() {
             const container = document.getElementById('canvas-container');
             const scene = new THREE.Scene();
@@ -757,14 +756,23 @@
                 color: 0x00f0ff,
                 wireframe: true,
                 transparent: true,
-                opacity: 0.25
+                opacity: 0.22
             });
             const icosahedron = new THREE.Mesh(geometry, material);
-            icosahedron.position.set(25, 10, -10);
+            
+            // Adjust position for smaller screens vs laptops
+            const updateMeshPosition = () => {
+                if (window.innerWidth < 768) {
+                    icosahedron.position.set(0, 15, -20);
+                } else {
+                    icosahedron.position.set(25, 10, -10);
+                }
+            };
+            updateMeshPosition();
             scene.add(icosahedron);
 
             // B. 3D Particle Field
-            const particleCount = 400;
+            const particleCount = window.innerWidth < 768 ? 200 : 400;
             const particlesGeometry = new THREE.BufferGeometry();
             const positions = new Float32Array(particleCount * 3);
 
@@ -793,24 +801,28 @@
                 targetY3D = (e.clientY - window.innerHeight / 2) * 0.02;
             });
 
-            // Window resize handler
+            // Handle browser resize & orientation changes
             window.addEventListener('resize', () => {
-                camera.aspect = window.innerWidth / window.innerHeight;
+                const width = window.innerWidth;
+                const height = window.innerHeight;
+                camera.aspect = width / height;
                 camera.updateProjectionMatrix();
-                renderer.setSize(window.innerWidth, window.innerHeight);
+                renderer.setSize(width, height);
+                updateMeshPosition();
             });
 
             // Render loop
             function animate() {
                 requestAnimationFrame(animate);
 
-                // Rotate 3D mesh
                 icosahedron.rotation.x += 0.003;
                 icosahedron.rotation.y += 0.005;
 
-                // Smoothly follow mouse
-                icosahedron.position.x += (targetX3D * 0.5 - icosahedron.position.x + 25) * 0.05;
-                icosahedron.position.y += (-targetY3D * 0.5 - icosahedron.position.y + 10) * 0.05;
+                const defaultX = window.innerWidth < 768 ? 0 : 25;
+                const defaultY = window.innerWidth < 768 ? 15 : 10;
+
+                icosahedron.position.x += (targetX3D * 0.5 - icosahedron.position.x + defaultX) * 0.05;
+                icosahedron.position.y += (-targetY3D * 0.5 - icosahedron.position.y + defaultY) * 0.05;
 
                 particleSystem.rotation.y += 0.0008;
                 particleSystem.rotation.x += 0.0004;
@@ -822,4 +834,3 @@
     </script>
 </body>
 </html>
-```
